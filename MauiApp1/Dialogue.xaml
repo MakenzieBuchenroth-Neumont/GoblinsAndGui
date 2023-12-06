@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Dialogue"
+             BackgroundImageSource="village.png">
+
+    <ScrollView>
+        <AbsoluteLayout>
+
+            <Image
+                Source="male_human_fighter_lowres.png"
+                WidthRequest="640"
+                HeightRequest="640"
+                AbsoluteLayout.LayoutBounds="0,0"/>
+
+            <!--<Label
+                x:Name="SelectedRaceDebug"
+                Text="Race"
+                TextColor="Black"
+                AbsoluteLayout.LayoutBounds="500,100"/>-->
+
+            <Label
+                x:Name="DialogueBox"
+                Text=""
+                TextColor="Black"
+                BackgroundColor="White"
+                AbsoluteLayout.LayoutBounds="500,100"/>
+
+            <ListView 
+                x:Name="responseListView"
+                SelectionMode="Single"
+                AbsoluteLayout.LayoutBounds="700,100"
+                BackgroundColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding}" TextColor="Black"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </AbsoluteLayout>
+    </ScrollView>
+
+</ContentPage>

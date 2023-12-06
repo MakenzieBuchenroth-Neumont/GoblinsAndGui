@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <AbsoluteLayout>
+
+            <Label Text="Select Race:"
+            AbsoluteLayout.LayoutBounds="10,0"/>
+            <Picker x:Name="racePicker"
+            SelectedIndexChanged="OnRaceSelectedIndexChanged"
+            AbsoluteLayout.LayoutBounds="10,20">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Human</x:String>
+                        <x:String>Elf</x:String>
+                        <x:String>Half-Elf</x:String>
+                        <x:String>Tiefling</x:String>
+                        <x:String>Dwarf</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Select Class:"
+               AbsoluteLayout.LayoutBounds="120,0"/>
+            <Picker x:Name="classPicker"
+            SelectedIndexChanged="OnRaceSelectedIndexChanged"
+            AbsoluteLayout.LayoutBounds="120,20">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Wizard</x:String>
+                        <x:String>Cleric</x:String>
+                        <x:String>Fighter</x:String>
+                        <x:String>Bard</x:String>
+                        <x:String>Druid</x:String>
+                        <x:String>Rogue</x:String>
+                        <x:String>Ranger</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label
+                x:Name="strLabel"
+                Text="Strength:"
+                HorizontalOptions="Center"
+                AbsoluteLayout.LayoutBounds="240,0"
+                />
+            <Button
+                x:Name="strButton"
+                Text="Roll"
+                Clicked="strButtonRoll"
+                IsEnabled="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                MaximumHeightRequest="200"
+                AbsoluteLayout.LayoutBounds="240,20"
+                />
+
+            <Label
+                x:Name="dexLabel"
+                Text="Dexterity:"
+                HorizontalOptions="Center"
+                AbsoluteLayout.LayoutBounds="360,0"
+                />  
+            <Button
+                x:Name="dexButton"
+                Text="Roll"
+                Clicked="dexButtonRoll"
+                IsEnabled="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                MaximumHeightRequest="200"
+                AbsoluteLayout.LayoutBounds="360,20"
+                />
+
+            <Label
+                x:Name="conLabel"
+                Text="Constitution:"
+                HorizontalOptions="Center"
+                AbsoluteLayout.LayoutBounds="480,0"
+                />
+            <Button
+                x:Name="conButton"
+                Text="Roll"
+                Clicked="conButtonRoll"
+                IsEnabled="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                MaximumHeightRequest="200"
+                AbsoluteLayout.LayoutBounds="490,20"
+                />
+
+            <Label
+                x:Name="intLabel"
+                Text="Intelligence:"
+                HorizontalOptions="Center"
+                AbsoluteLayout.LayoutBounds="600,0"
+                />
+            <Button
+                x:Name="intButton"
+                Text="Roll"
+                Clicked="intButtonRoll"
+                IsEnabled="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                MaximumHeightRequest="200"
+                AbsoluteLayout.LayoutBounds="610,20"
+                />
+
+            <Label
+                x:Name="wisLabel"
+                Text="Wisdom:"
+                HorizontalOptions="Center"
+                AbsoluteLayout.LayoutBounds="720,0"
+                />
+            <Button
+                x:Name="wisButton"
+                Text="Roll"
+                Clicked="wisButtonRoll"
+                IsEnabled="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                MaximumHeightRequest="200"
+                AbsoluteLayout.LayoutBounds="720,20"
+                />
+
+            <Label
+                x:Name="chrLabel"
+                Text="Charisma:"
+                HorizontalOptions="Center"
+                AbsoluteLayout.LayoutBounds="840,0"
+                />
+            <Button
+                x:Name="chrButton"
+                Text="Roll"
+                Clicked="chrButtonRoll"
+                IsEnabled="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                MaximumHeightRequest="200"
+                AbsoluteLayout.LayoutBounds="845,20"
+                />
+
+            <Button
+                x:Name="submitButton"
+                Text="Submit"
+                Clicked="submitButtonClick"
+                IsEnabled="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                MaximumHeightRequest="200"
+                AbsoluteLayout.LayoutBounds="950,10"
+                />
+
+
+        </AbsoluteLayout>
+    </ScrollView>
+
+</ContentPage>
