@@ -59,12 +59,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Combat.xaml.cs">
+	    <DependentUpon>Combat.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Dialogue.xaml.cs">
 	    <DependentUpon>Dialogue.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Combat.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Dialogue.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

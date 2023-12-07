@@ -7,27 +7,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GameLogic.Dialogue {
-    public class DialogueSystem {
+    public class DialogueSystem : INotifyPropertyChanged {
         private DialogueNode currentNode;
 
         public event EventHandler CurrentNodeChanged;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName) {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public DialogueNode CurrentNode {
             get { return currentNode; }
             set {
                 if (currentNode != value) {
                     currentNode = value;
-
-                    // Raise the event when the current node changes
-                    OnCurrentNodeChanged();
-
-                    // You can also raise PropertyChanged event if you implement INotifyPropertyChanged
+                    OnPropertyChanged(nameof(CurrentNode));
                 }
             }
-        }
-        protected virtual void OnCurrentNodeChanged()
-        {
-            CurrentNodeChanged?.Invoke(this, EventArgs.Empty);
         }
 
         public DialogueSystem(DialogueTree dialogueTree) {
@@ -43,13 +41,20 @@ namespace GameLogic.Dialogue {
         public List<DialogueNode> getOptions() { 
             return currentNode.Options;
         }
+
         public void setNextNode(int optionIndex) {
             if (optionIndex >= 0 && optionIndex < currentNode.Options.Count) {
                 currentNode = currentNode.Options[optionIndex];
-
                 CurrentNodeChanged?.Invoke(this, EventArgs.Empty);
             }
         }
+
+
+        public int getOptionIndex(DialogueNode selectedOption)
+        {
+            return currentNode.Options.IndexOf(selectedOption);
+        }
+
         public bool hasOptions() {
             return currentNode.Options.Count > 0;
         }
