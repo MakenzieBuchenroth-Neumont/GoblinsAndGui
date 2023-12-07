@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.CombatPage"
+             BackgroundImageSource="parchment.png">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+                <ProgressBar
+                    x:Name="enemyHealth"
+                    ProgressColor="Red"
+                    Progress="1"
+                    MinimumWidthRequest="400"
+                    MaximumWidthRequest="700"
+                    Margin="10"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+            </HorizontalStackLayout>
+
+            <Image
+                Source="male_human_fighter_lowres.png"
+                WidthRequest="640"
+                HeightRequest="640"/>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <ProgressBar
+            x:Name="playerHealth"
+            ProgressColor="Red"
+            Progress="1"
+                MinimumWidthRequest="200"
+                MaximumWidthRequest="700"
+                Margin="10"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+            <ProgressBar
+                x:Name="playerMana"
+                ProgressColor="Blue"
+                Progress="1"
+                MinimumWidthRequest="200"
+                MaximumWidthRequest="700"
+                Margin="10"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+
+                <Button
+                    x:Name="melee"
+                    Text="Melee"
+                    Clicked="melee_Clicked"/>
+
+                <Button
+                    x:Name="range"
+                    Text="Ranged"
+                    Clicked="range_Clicked"/>
+                
+                <Button
+                    x:Name="magic"
+                    Text="Magic"
+                    Clicked="magic_Clicked"/>
+                
+                <Button
+                    x:Name="heal"
+                    Text="Healing Potion (3)"
+                    Clicked="heal_Clicked"/>
+
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

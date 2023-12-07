@@ -59,19 +59,31 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Combat.xaml.cs">
-	    <DependentUpon>Combat.xaml</DependentUpon>
+	  <Compile Update="CombatPage.xaml.cs">
+	    <DependentUpon>CombatPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Dialogue.xaml.cs">
 	    <DependentUpon>Dialogue.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Lose.xaml.cs">
+	    <DependentUpon>Lose.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Win.xaml.cs">
+	    <DependentUpon>Win.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Combat.xaml">
+	  <MauiXaml Update="CombatPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Dialogue.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Lose.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Win.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

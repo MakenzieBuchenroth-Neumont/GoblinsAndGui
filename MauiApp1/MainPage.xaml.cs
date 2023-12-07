@@ -18,6 +18,10 @@ namespace MauiApp1 {
             character = new Character();
         }
 
+        public void Entry_TextChanged() {
+            character.name = nameEntry.Text.ToString();
+        }
+
         private void OnRaceSelectedIndexChanged(object sender, EventArgs e) {
             string selectedRaceString = racePicker.SelectedItem as string;
 
@@ -98,6 +102,11 @@ namespace MauiApp1 {
                 Console.WriteLine(character.race);
                 Navigation.PushAsync(new Dialogue(character));
             }
+        }
+
+        private void Entry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 

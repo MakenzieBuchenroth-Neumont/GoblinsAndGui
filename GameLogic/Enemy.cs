@@ -21,7 +21,7 @@ namespace GameLogic
         }
 
         public int setHealth() {
-            health = random.Next(100, 150 + 1);
+            health = random.Next(50, 100 + 1);
 
             maxHealth = health;
             return health;

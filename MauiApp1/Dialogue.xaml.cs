@@ -27,7 +27,7 @@ namespace MauiApp1 {
                 updateUI();
 
                 if (_dialogueSystem.getCurrentNpcResponse() == "Prepare to die!") {
-                    Navigation.PushAsync(new Combat(character)); 
+                    Navigation.PushAsync(new CombatPage(character)); 
                 }
             }
         }
